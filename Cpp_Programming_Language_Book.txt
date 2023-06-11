@@ -1,0 +1,35 @@
+By Bjarne Stroupstrup
+
+
+-- 1 Intro to C++ --
+
+	Supports 4 Programming styles
+		- Procedural
+		- Data abstraction
+			- design of interfaces, hiding of implementation
+		- Object-oriented
+			- using of class hierarchies
+		- Generic
+			- using general algorithms
+		
+	* Combination of 1 or more styles ideal
+	
+	
+Chapter 1 Advice:
+	1) Represent ideas directly in code, as a function or class or enum etc.
+	2) Aim for code to be elegant & efficient
+	3) Dont overabstract
+	4) Focus design on provision of elegant & efficient abstraction, possible libraries that others can use
+	5) represent r/s among ideas directly in code (through class hierarchies)
+	6) represent independent ideas separately in code, avoid mutual dependencies among classes
+	7) C++ is not just OOP / generic / procedural
+	8) Prefer soln that can be statically checked
+	9) express simple ideas simply
+	10) Use libraries whenever possible instead of self-coding
+	11) low-level code not necessarily efficient
+	
+	
+Chapter 2: C++ Basics
+(types | variables | arithmetic | constants | tests | loops | pointers | arrays)
+(user-defined types | structures | classes | enums )
+(modularity | namespaces | error handling)

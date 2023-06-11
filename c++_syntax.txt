@@ -1,0 +1,167 @@
+install codeblocks with mingw (includes c++ compiler)
+(http://www.codeblocks.org/downloads/binaries/)
+
+
+How C++ code runs:
+
+source file(.cpp)-> *compiler*->object file->*linker*->executable file
+	
+	
+	
+========================================================
+
+-- STRUCTURE OF A PROGRAM --
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	cout << "Hello World!" << endl;
+	return 0;
+}
+========================================================
+
+
+-- Preprocessor Directive --
+
+	- Lines beginning with # are preprocessor directives
+	- indications for compiler's preprocessor
+	
+	#include <iostream>
+		- tells processor to include iostream std file
+		- iostream file includes declaration of standard input / output in C++
+
+		- <> for standard files
+		- "" for user-defined files
+			- #include "aUserDefinedFile.cpp"
+		
+		
+		
+-- Namespaces --
+
+	Namespace : declarative region, providing scope to identifiers within that scope
+		- identifiers : 
+			- names of types (int, double etc.)
+			- functions
+			- variables
+			
+		- Used to organize code into logical groups, preventing similar name collisions especially when multiple libraries involved.
+		
+		eg:
+		- variable "deck" for deck of cards
+		- variable "deck" for ship's deck
+		
+		scope operator is ::
+		
+		std::cout<<"Hello World"<<endl;
+			- cout scoped in std library
+			
+		using namespace std
+			- use the standard library namespace
+
+-- Main Function --
+	- Every program shall contain a global function called main (essentially entry point)
+	- has 2 forms:
+		
+		1) int main() {}
+		2) int main(int argc, char* argv[]) {}
+			- argc : non-negative value representing no. of arguments passed to program (cmdline arguments)
+			- argv : pointer to first element of array containing the arguments, last element being null
+			
+			- argc and argv are conventions, can be other names as well
+			
+	Special properties of main fn:
+		- cannot be used anywhere in program
+		- cannot be called recursively
+		- address cannot be taken
+		- cannot be overloaded
+		- automatically returns 0 if program no error (no return 0 required)
+			- leave main function then call std::exit
+			
+			
+C++ syntax:
+	cout << "Hello world!";
+	cout
+		<< "This also works";
+	return 0;
+
+-- C++ Built-in datatypes --
+ 
+	- short int : 2 bytes : +-32767 | 0 to 65535
+	- int : 4 bytes : +- 2147483648 | 0 to 4294967295
+	- long int : 8 bytes : +-9.223372036e20
+	- float : 4 bytes : +- 3.4e38 (7 digits)
+	- double : 8 bytes : +- 1.7e308 (15 digits)
+	- long double : even more precise depending on compiler
+	- char : 1 byte
+	- string : 
+	- bool : 1 byte : true / false
+	
+-- Declaration of number datatypes --
+	- signed (consist of -ve values) (default if undeclared)
+	- unsigned (only +ve values)
+	
+	unsigned int numSiblings;
+	signed float accountBalance;
+
+
+-- Variables Scope --
+	1) Global scoped
+		- declared outside all functions
+		- usable by all functions within source code
+		
+	2) Local scoped
+		- declared within body of function
+		- only usable by function
+
+-- Initializing values for variables (2 ways)--
+
+	1) int a=5;
+	2) int b(2); 
+	
+-- C++ Strings --
+	- #include <string>
+	
+	- string myString = "String1";
+	- string myString("Also Valid");
+	
+	See (https://www.tutorialspoint.com/cplusplus/cpp_strings.htm)
+	for common string methods
+	
+-- Decimal, Octal, Hexadecimal Literal constants --
+	int decimal = 75;
+	int octal = 0113; // starts with 0
+	int hexa = 0x4b // starts with 0x4b
+	
+-- forcing literal constants type --
+
+	int num = 75;
+	int u_num = 75u; // unsigned
+	int l_num = 75l; // long
+	int ul_num = 75ul; // unsigned long
+
+-- Floats --
+	float num = 3.14159;
+	float num = 6.02e23;
+	float num = 1.6e-19;
+	
+
+	
+-- C++ Arrays --
+
+	- string cars[4];
+	- string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"};
+	- int myNum[3] = {10, 20, 30}
+	
+-- Keywords in C++ --
+
+	* Case sensitive *
+	
+	asm, auto, bool, break, case, catch, char, class, const, const_cast, continue, default, delete, 
+	do, double, dynamic_cast, else, enum, explicit, export, extern, false, float, for, friend, goto, 
+	if, inline, int, long, mutable, namespace, new, operator, private, protected, public, register, 
+	reinterpret_cast, return, short, signed, sizeof, static, static_cast, struct, switch, template, 
+	this, throw, true, try, typedef, typeid, typename, union, unsigned, using, virtual, void, 
+	volatile, wchar_t, while 
+	
